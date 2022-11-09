@@ -15,7 +15,8 @@ int main(int argc, char **argv)
     struct stat *buf;
     stat(dir, buf);
 
-    printf("Name: %s\n");
+    printf("Name: ");
+    filter_name(dir);
     printf("Type: \n");
     printf("Inode: %d\n", (int)buf->st_ino);
     printf("Hard Link: %d\n", (int)buf->st_nlink);
